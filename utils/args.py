@@ -38,7 +38,7 @@ def parse_args():
         type=int,
         help="Edit size of graphs in case they are borken due too small screen size",
         required=False,
-        default=60,
+        default=50,
     )
 
     parser.add_argument(
