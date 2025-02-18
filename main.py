@@ -5,12 +5,7 @@ from src.storage_dashboard import StorageDashboard
 from src.aio_http_client import AioHttpCalls
 
 async def run_dashboard(dashboard: StorageDashboard):
-    try:
-        await dashboard.start()
-    except Exception as e:
-        logger.error(f"Unhandled exception in the dashboard: {e}", exc_info=True)
-    finally:
-        logger.info("Dashboard stopped cleanly.")
+    await dashboard.start()
 
 async def main():
     logger.info("Starting Dashboard...")
