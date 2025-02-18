@@ -30,5 +30,10 @@ async def main():
         finally:
             logger.info("Goodbye!")
 
-if __name__ ==  "__main__":
-    asyncio.run(main())
+if __name__ == "__main__":
+    try:
+        asyncio.run(main())
+    except KeyboardInterrupt:
+        logger.info("Program interrupted. Exiting gracefully.")
+    except Exception as e:
+        logger.error(f"Unexpected error: {e}", exc_info=True)
