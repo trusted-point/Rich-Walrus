@@ -122,8 +122,8 @@ class StorageDashboard:
             )
         )
 
-    def big_number(self, number: int):
-        return figlet_format(text=str(number), font='standard')
+    def ascii_number(self, number: int):
+        return figlet_format(text=str(number), font='small')
 
     async def update_node_status(self):
 
@@ -220,7 +220,7 @@ class StorageDashboard:
         return Panel(content, expand=True, title="[bold]SHARDS[/bold]", border_style="cyan")
 
     def create_checkpoint_lag_panel(self):
-        value = self.big_number(self.checkpoint_downloader_lag) if isinstance(self.checkpoint_downloader_lag, int) else str(self.checkpoint_downloader_lag)
+        value = self.ascii_number(self.checkpoint_downloader_lag) if isinstance(self.checkpoint_downloader_lag, int) else str(self.checkpoint_downloader_lag)
         color="red" if isinstance(self.checkpoint_downloader_lag, int) and self.checkpoint_downloader_lag > 0 else "green"
 
         text = Text(value, style=Style(bold=True, underline=False, color=color))
@@ -228,14 +228,14 @@ class StorageDashboard:
         return Panel(centered_text, expand=True, title="[bold] CHECKPOINTS LAG[/bold]", border_style=color)
 
     def create_total_persisted_events_panel(self):
-        value = self.big_number(self.persisted_events) if isinstance(self.persisted_events, int) else str(self.persisted_events)
+        value = self.ascii_number(self.persisted_events) if isinstance(self.persisted_events, int) else str(self.persisted_events)
         color = "green"
         text = Text(value, style=Style(bold=True, underline=False, color=color))
         centered_text = Align.center(text, vertical="middle")
         return Panel(centered_text, expand=True, title="[bold] PERSISTED EVENTS[/bold]", border_style=color)
 
     def create_total_downloaded_checkpoints_panel(self):
-        value = self.big_number(self.total_downloaded_checkpoints) if isinstance(self.total_downloaded_checkpoints, int) else str(self.total_downloaded_checkpoints)
+        value = self.ascii_number(self.total_downloaded_checkpoints) if isinstance(self.total_downloaded_checkpoints, int) else str(self.total_downloaded_checkpoints)
         color = "cyan"
         text = Text(value, style=Style(bold=True, underline=False, color=color))
         centered_text = Align.center(text, vertical="middle")
