@@ -30,7 +30,7 @@ pip3 install -r requirements.txt
 ```
 ### 5. Start the app
 ```bash
-python3 main.py --storage-metrics-url http://walrus-testnet-storage.trusted-point.com/metrics --storage-rpc-url https://walrus-testnet-storage.trusted-point.com:9185
+python3 main.py --storage-metrics-url http://walrus-testnet-storage.trusted-point.com:9184/metrics --storage-rpc-url https://walrus-testnet-storage.trusted-point.com:9185
 ```
 ### Flags and parameters
 ```bash
