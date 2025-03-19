@@ -21,7 +21,7 @@ def parse_args():
     parser.add_argument(
         "--logs-path",
         type=str,
-        help="Path to the log file. If not provided, logs will not be stored",
+        help="Path to the log file. Use to debug in case of unexpected error. If not provided, logs will not be stored",
         required=False,
     )
 
@@ -54,7 +54,7 @@ def parse_args():
         type=str,
         help="Storage node RPC metrics url",
         required=False,
-        default="http://127.0.0.1:9185"
+        default="https://127.0.0.1:9185"
     )
 
     parser.add_argument(

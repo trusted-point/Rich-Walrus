@@ -69,3 +69,10 @@ class StorageMetrics:
     def get_total_downloaded_checkpoints(metrics: str) -> Optional[int]:
         pattern = r"event_processor_total_downloaded_checkpoints\s+(\d+)"
         return StorageMetrics._get_value(metrics, pattern)
+
+    @staticmethod
+    def get_walrus_recover_blob_backlog(metrics: str, state: Literal["queued", "in-progress",]) -> Optional[int]:
+        pattern = rf'walrus_recover_blob_backlog\{{state="{state}"\}}\s+(\d+)'
+
+        return StorageMetrics._get_value(metrics, pattern)
+    

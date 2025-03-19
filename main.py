@@ -16,7 +16,7 @@ async def main():
             refresh_metrics_rate=args.storage_refresh_metrics_rate,
             refresh_node_rpc_rate=args.storage_refresh_rpc_rate,
             refresh_per_second=args.dashboard_refresh_per_second,
-            graph_size=args.dashboard_graph_size
+            graph_size=args.dashboard_graph_size,
             )
 
         try:
