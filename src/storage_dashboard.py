@@ -226,7 +226,7 @@ class StorageDashboard:
             self.recover_blob_backlog_queued_deque.append(blob_backlog_in_queued)
         else:
             logger.warning("walrus_recover_blob_backlog [queued] not presented. Setting zero")
-            self.recover_blob_backlog_queued.append(0)
+            self.recover_blob_backlog_queued_deque.append(0)
 
     def create_shards_panel(self):
 
