@@ -37,7 +37,7 @@ python3 main.py --storage-metrics-url http://walrus-testnet-storage.trusted-poin
 -h, --help            show this help message and exit
 --logs-lvl LOGS_LVL   Set the logging level [DEBUG, INFO, WARNING, ERROR] (default: DEBUG)
 --logs-path LOGS_PATH
-                    Path to the log file. If not provided, logs will not be stored (default: None)
+                    Path to the log file. Use to debug in case of unexpected error. If not provided, logs will not be stored (default: None)
 --dashboard-refresh-per-second DASHBOARD_REFRESH_PER_SECOND
                     Refresh rate of the table per second (default: 5)
 --dashboard-graph-size DASHBOARD_GRAPH_SIZE
@@ -45,7 +45,7 @@ python3 main.py --storage-metrics-url http://walrus-testnet-storage.trusted-poin
 --storage-metrics-url STORAGE_METRICS_URL
                     Storage node prometheus metrics url (default: http://127.0.0.1:9184/metrics)
 --storage-rpc-url STORAGE_RPC_URL
-                    Storage node RPC metrics url (default: http://127.0.0.1:9185)
+                    Storage node RPC metrics url (default: https://127.0.0.1:9185)
 --storage-refresh-metrics-rate STORAGE_REFRESH_METRICS_RATE
                     Refresh metrics every N second (default: 2)
 --storage-refresh-rpc-rate STORAGE_REFRESH_RPC_RATE
